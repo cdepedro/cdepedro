@@ -113,7 +113,8 @@ if [[ "$answer" =~ "y" ]] || [[ "$answer" =~ "Y" ]]; then
 fi
 
 info "Restarting NetworkManager"
-systemctl restart "${SERVICE_NM}"
+# systemctl restart "${SERVICE_NM}"
+sudo /etc/init.d/network-manager restart
 
 # Parse command line parameters
 while [[ $# -gt 0 ]]; do
